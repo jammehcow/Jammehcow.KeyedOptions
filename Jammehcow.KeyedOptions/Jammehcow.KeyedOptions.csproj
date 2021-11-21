@@ -16,5 +16,15 @@
       <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="6.0.0" />
       <PackageReference Include="Microsoft.Extensions.Options" Version="6.0.0" />
     </ItemGroup>
+
+    <PropertyGroup>
+        <Authors>James Upjohn (jammehcow)</Authors>
+        <Description>KeyedOptions provides extensions to register options with predefined keys.</Description>
+        <Version>1.0.0</Version>
+        <Copyright>Copyright 2021 © James Upjohn (jammehcow). All rights reserved.</Copyright>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <RepositoryUrl>https://github.com/jammehcow/Jammehcow.KeyedOptions</RepositoryUrl>
+        <RepositoryType>git</RepositoryType>
+    </PropertyGroup>
     
 </Project>

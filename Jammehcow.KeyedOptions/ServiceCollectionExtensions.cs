@@ -6,6 +6,9 @@ using Microsoft.Extensions.Options;
 
 namespace Jammehcow.KeyedOptions
 {
+    /// <summary>
+    /// Extensions to IServiceCollection for registering options based on IKeyedOptions
+    /// </summary>
     public static class ServiceCollectionExtensions
     {
         /// <summary>

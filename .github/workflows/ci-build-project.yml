@@ -14,4 +14,4 @@ jobs:
 
       - name: Build Solution using .NET CLI
         id: build_solution
-        run: dotnet build Jammehcow.KeyedOptions/Jammehcow.KeyedOptions.csproj
+        run: dotnet build src/Jammehcow.KeyedOptions/Jammehcow.KeyedOptions.csproj

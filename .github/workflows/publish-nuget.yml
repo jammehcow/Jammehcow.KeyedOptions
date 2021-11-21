@@ -20,7 +20,7 @@ jobs:
         id: publish_nuget
         uses: rohith/publish-nuget@v2
         with:
-          PROJECT_FILE_PATH: Jammehcow.KeyedOptions/Jammehcow.KeyedOptions.csproj
+          PROJECT_FILE_PATH: src/Jammehcow.KeyedOptions/Jammehcow.KeyedOptions.csproj
           PACKAGE_NAME: Jammehcow.KeyedOptions
           TAG_COMMIT: true
           TAG_FORMAT: v*

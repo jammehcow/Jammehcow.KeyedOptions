@@ -16,5 +16,17 @@ namespace Jammehcow.KeyedOptions
                 .Configure((TOptions options, IConfiguration configuration) =>
                     configuration.GetSection(options.SectionKey).Bind(options));
         }
+
+        public static OptionsBuilder<TOptions> AddKeyedOptions<TOptions>(this IServiceCollection serviceCollection,
+            [InstantHandle]Func<IConfiguration?> configurationResolver) where TOptions : class, IKeyedOptions, new()
+        {
+            var configuration = configurationResolver.Invoke();
+            if (configuration == null)
+                throw new InvalidOperationException("Could not resolve an IConfiguration from the provided function");
+
+            return serviceCollection
+                .AddOptions<TOptions>()
+                .Configure(options => configuration.GetSection(options.SectionKey).Bind(options));
+        }
     }
 }

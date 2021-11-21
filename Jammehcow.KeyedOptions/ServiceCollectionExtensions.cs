@@ -8,6 +8,12 @@ namespace Jammehcow.KeyedOptions
 {
     public static class ServiceCollectionExtensions
     {
+        /// <summary>
+        /// Resolves, binds and registers a given implementation of IKeyedOptions in an IServiceCollection
+        /// </summary>
+        /// <param name="serviceCollection">The container to resolve the root configuration and register the bound options to</param>
+        /// <typeparam name="TOptions">An implementation of IKeyedOptions to be registered in the container</typeparam>
+        /// <returns>The OptionsBuilder that TOptions was built with (for extra configuration)</returns>
         public static OptionsBuilder<TOptions> AddKeyedOptions<TOptions>(this IServiceCollection serviceCollection)
             where TOptions : class, IKeyedOptions, new()
         {
@@ -17,6 +23,14 @@ namespace Jammehcow.KeyedOptions
                     configuration.GetSection(options.SectionKey).Bind(options));
         }
 
+        /// <summary>
+        /// Resolves, binds and registers a given implementation of IKeyedOptions in an IServiceCollection
+        /// </summary>
+        /// <param name="serviceCollection">The container to register the bound options to</param>
+        /// <param name="configurationResolver">A function which provides an instance of IConfiguration</param>
+        /// <typeparam name="TOptions">An implementation of IKeyedOptions to be registered in the container</typeparam>
+        /// <returns>The OptionsBuilder that TOptions was built with (for extra configuration)</returns>
+        /// <exception cref="InvalidOperationException">When an IConfiguration instance was not provided by the provided function</exception>
         public static OptionsBuilder<TOptions> AddKeyedOptions<TOptions>(this IServiceCollection serviceCollection,
             [InstantHandle]Func<IConfiguration?> configurationResolver) where TOptions : class, IKeyedOptions, new()
         {

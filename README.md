@@ -7,6 +7,25 @@
 I've used this chunk of code in a few work projects and found myself needing it in personal ones too.
 You might think this isn't worth creating a package for, but here it is!
 
+## Usage
+
+First, create a class that inherits `IKeyedOptions`:
+```c#
+class MyCoolOptions : IKeyedOptions {
+    public string SectionKey => "MySection";
+    
+    public string MyValue { get; set; }
+}
+```
+
+Register your `IKeyedOptions` implementation with the IServiceCollection using the provided extension method:
+```c#
+// This could be in your ConfigureService method or anywhere an IServiceCollection is present
+serviceCollection.AddKeyedOptions<MyCoolOptions>();
+```
+
+You can now use `IOptions<MyCoolOptions>` as a constructor parameter to access configuration values.
+
 ## License
 
 MIT, see [LICENSE](./LICENSE.txt) for more info.

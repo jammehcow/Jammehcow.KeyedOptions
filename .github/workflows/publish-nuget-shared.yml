@@ -5,7 +5,7 @@ on:
     branches:
       - main
     paths:
-      - src/TTools.Configuration.KeyedOptions/**
+      - src/TTools.Configuration.KeyedOptions.Shared/**
 jobs:
   publish_net6:
     name: Publish .NET Standard Library to NuGet

@@ -1,4 +1,4 @@
-# Jammehcow.KeyedOptions
+# TTools.Configuration.KeyedOptions
 
 `KeyedOptions` is a small library aimed to reduce code duplication (specifically binding with keys) when registering `IOptions` in .NET
 

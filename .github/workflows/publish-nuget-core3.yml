@@ -1,0 +1,32 @@
+name: Publish .NET Core 3.1 library to NuGet
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - src/TTools.Configuration.KeyedOptions.Core3/
+      - src/TTools.Configuration.KeyedOptions/
+jobs:
+  publish_netcore3:
+    name: Publish .NET Core 3.1 Library to NuGet
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Install dotNET Core
+        id: install_dotnet
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: 3.1.415
+
+      - name: Publish NuGet Package
+        id: publish_nuget
+        uses: rohith/publish-nuget@v2
+        with:
+          PROJECT_FILE_PATH: src/TTools.Configuration.KeyedOptions.Core3/TTools.Configuration.KeyedOptions.Core3.csproj
+          PACKAGE_NAME: TTools.Configuration.KeyedOptions.Core3
+          TAG_COMMIT: true
+          TAG_FORMAT: v*-core3
+          NUGET_KEY: ${{secrets.NUGET_API_KEY}}
+          NUGET_SOURCE: https://api.nuget.org
+          INCLUDE_SYMBOLS: true

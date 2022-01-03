@@ -1,10 +1,10 @@
-using System;
 using JetBrains.Annotations;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
+using TTools.Configuration.KeyedOptions.Shared;
 
-namespace Jammehcow.KeyedOptions
+namespace TTools.Configuration.KeyedOptions.Net6
 {
     /// <summary>
     /// Extensions to IServiceCollection for registering options based on IKeyedOptions

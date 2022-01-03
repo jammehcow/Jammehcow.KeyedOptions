@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netstandard2.1</TargetFramework>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="JetBrains.Annotations" Version="2021.3.0" />
+        <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="3.1.22" />
+        <PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="3.1.22" />
+        <PackageReference Include="Microsoft.Extensions.Options" Version="3.1.22" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\TTools.Configuration.KeyedOptions.Shared\TTools.Configuration.KeyedOptions.Shared.csproj" />
+    </ItemGroup>
+
+    <PropertyGroup>
+        <Authors>TTools Developers</Authors>
+        <Description>KeyedOptions provides extensions to register options with predefined keys.</Description>
+        <Version>1.1.0</Version>
+        <Copyright>Copyright 2021 © TTools Development. All rights reserved.</Copyright>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <RepositoryUrl>https://github.com/ttools-dev/TTools.Configuration.KeyedOptions</RepositoryUrl>
+        <RepositoryType>git</RepositoryType>
+    </PropertyGroup>
+
+</Project>

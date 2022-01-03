@@ -9,7 +9,11 @@ You might think this isn't worth creating a package for, but here it is!
 
 ## Usage
 
-First, create a class that inherits `IKeyedOptions`:
+Install the appropriate package for your .NET version:
+ - `TTools.Configuration.KeyedOptions.Net6` for projects targeting .NET 6
+ - `TTools.Configuration.KeyedOptions.Core3` for projects targeting .NET Core 3.1
+
+Create a class that inherits `IKeyedOptions`:
 ```c#
 class MyCoolOptions : IKeyedOptions {
     public string SectionKey => "MySection";

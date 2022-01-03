@@ -12,6 +12,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TTools.Configuration.KeyedO
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TTools.Configuration.KeyedOptions.Net6", "src\TTools.Configuration.KeyedOptions.Net6\TTools.Configuration.KeyedOptions.Net6.csproj", "{72844945-5547-4558-88C1-BA1146352269}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Workflows", "Workflows", "{EC35997F-E80A-4B92-8D4F-1A2212464611}"
+	ProjectSection(SolutionItems) = preProject
+		.github\workflows\ci-build-project.yml = .github\workflows\ci-build-project.yml
+		.github\workflows\publish-nuget.yml = .github\workflows\publish-nuget.yml
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,5 +36,8 @@ Global
 		{72844945-5547-4558-88C1-BA1146352269}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{72844945-5547-4558-88C1-BA1146352269}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{72844945-5547-4558-88C1-BA1146352269}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{EC35997F-E80A-4B92-8D4F-1A2212464611} = {60D3A211-A5F6-4AB2-91EF-479E4FA44ECD}
 	EndGlobalSection
 EndGlobal

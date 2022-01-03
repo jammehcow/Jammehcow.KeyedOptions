@@ -24,7 +24,7 @@ jobs:
         uses: rohith/publish-nuget@v2
         with:
           PROJECT_FILE_PATH: src/TTools.Configuration.KeyedOptions.Net6/TTools.Configuration.KeyedOptions.Net6.csproj
-          PACKAGE_NAME: TTools.Configuration.KeyedOptions.Core3
+          PACKAGE_NAME: TTools.Configuration.KeyedOptions.Net6
           TAG_COMMIT: true
           TAG_FORMAT: v*-net6
           NUGET_KEY: ${{secrets.NUGET_API_KEY}}

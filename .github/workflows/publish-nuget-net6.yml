@@ -1,5 +1,6 @@
 name: Publish .NET 6 library to NuGet
 on:
+  workflow_dispatch:
   push:
     branches:
       - main

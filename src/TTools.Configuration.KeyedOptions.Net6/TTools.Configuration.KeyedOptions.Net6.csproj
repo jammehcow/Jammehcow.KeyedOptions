@@ -18,12 +18,12 @@
     </ItemGroup>
 
     <PropertyGroup>
-        <Authors>James Upjohn (jammehcow)</Authors>
+        <Authors>TTools Developers</Authors>
         <Description>KeyedOptions provides extensions to register options with predefined keys.</Description>
-        <Version>1.0.0</Version>
-        <Copyright>Copyright 2021 © James Upjohn (jammehcow). All rights reserved.</Copyright>
+        <Version>1.1.0</Version>
+        <Copyright>Copyright 2021 © TTools Development. All rights reserved.</Copyright>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
-        <RepositoryUrl>https://github.com/jammehcow/Jammehcow.KeyedOptions</RepositoryUrl>
+        <RepositoryUrl>https://github.com/ttools-dev/TTools.Configuration.KeyedOptions</RepositoryUrl>
         <RepositoryType>git</RepositoryType>
     </PropertyGroup>
 

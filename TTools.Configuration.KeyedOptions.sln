@@ -3,6 +3,10 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TTools.Configuration.KeyedOptions.Shared", "src\TTools.Configuration.KeyedOptions.Shared\TTools.Configuration.KeyedOptions.Shared.csproj", "{9FF0A6CA-E689-4801-A42A-D7E01FFEB969}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{60D3A211-A5F6-4AB2-91EF-479E4FA44ECD}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+		LICENSE.txt = LICENSE.txt
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TTools.Configuration.KeyedOptions.Core3", "src\TTools.Configuration.KeyedOptions.Core3\TTools.Configuration.KeyedOptions.Core3.csproj", "{48AF9B39-6FD0-4AAB-968A-2554C6BD5B90}"
 EndProject

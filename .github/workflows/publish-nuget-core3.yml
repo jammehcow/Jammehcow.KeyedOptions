@@ -22,7 +22,7 @@ jobs:
 
       - name: Publish NuGet Package
         id: publish_nuget
-        uses: rohith/publish-nuget@v2
+        uses: alirezanet/publish-nuget@v3.0.0
         with:
           PROJECT_FILE_PATH: src/TTools.Configuration.KeyedOptions.Core3/TTools.Configuration.KeyedOptions.Core3.csproj
           PACKAGE_NAME: TTools.Configuration.KeyedOptions.Core3

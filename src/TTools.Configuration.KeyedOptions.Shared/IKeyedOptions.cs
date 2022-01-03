@@ -1,4 +1,4 @@
-﻿namespace TTools.Configuration.KeyedOptions
+﻿namespace TTools.Configuration.KeyedOptions.Shared
 {
     /// <summary>
     /// An interface allowing options to provide their own section key

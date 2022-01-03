@@ -1,0 +1,32 @@
+name: Publish .NET 6 library to NuGet
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - src/TTools.Configuration.KeyedOptions.Net6/
+      - src/TTools.Configuration.KeyedOptions/
+jobs:
+  publish_net6:
+    name: Publish .NET 6 Library to NuGet
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Install dotNET Core
+        id: install_dotnet
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: 6.0.101
+
+      - name: Publish NuGet Package
+        id: publish_nuget
+        uses: rohith/publish-nuget@v2
+        with:
+          PROJECT_FILE_PATH: src/TTools.Configuration.KeyedOptions.Net6/TTools.Configuration.KeyedOptions.Net6.csproj
+          PACKAGE_NAME: TTools.Configuration.KeyedOptions.Core3
+          TAG_COMMIT: true
+          TAG_FORMAT: v*-net6
+          NUGET_KEY: ${{secrets.NUGET_API_KEY}}
+          NUGET_SOURCE: https://api.nuget.org
+          INCLUDE_SYMBOLS: false

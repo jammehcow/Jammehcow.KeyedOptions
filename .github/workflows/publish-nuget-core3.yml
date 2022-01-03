@@ -6,7 +6,7 @@ on:
       - main
     paths:
       - src/TTools.Configuration.KeyedOptions.Core3/**
-      - src/TTools.Configuration.KeyedOptions/**
+      - src/TTools.Configuration.KeyedOptions.Shared/**
 jobs:
   publish_netcore3:
     name: Publish .NET Core 3.1 Library to NuGet

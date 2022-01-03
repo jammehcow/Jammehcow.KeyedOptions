@@ -4,8 +4,8 @@ on:
     branches:
       - main
     paths:
-      - src/TTools.Configuration.KeyedOptions.Net6/
-      - src/TTools.Configuration.KeyedOptions/
+      - src/TTools.Configuration.KeyedOptions.Net6/**
+      - src/TTools.Configuration.KeyedOptions/**
 jobs:
   publish_net6:
     name: Publish .NET 6 Library to NuGet

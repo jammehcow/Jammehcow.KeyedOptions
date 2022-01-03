@@ -8,4 +8,14 @@
         <RootNamespace>TTools.Configuration.KeyedOptions.Shared</RootNamespace>
     </PropertyGroup>
 
+    <PropertyGroup>
+        <Authors>TTools Developers</Authors>
+        <Description>KeyedOptions provides extensions to register options with predefined keys.</Description>
+        <Version>1.1.1</Version>
+        <Copyright>Copyright 2021 © TTools Development. All rights reserved.</Copyright>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <RepositoryUrl>https://github.com/ttools-dev/TTools.Configuration.KeyedOptions</RepositoryUrl>
+        <RepositoryType>git</RepositoryType>
+    </PropertyGroup>
+
 </Project>
